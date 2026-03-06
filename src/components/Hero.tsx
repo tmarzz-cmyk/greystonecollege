@@ -1,38 +1,68 @@
-import campusHero from "@/assets/campus-hero.jpg";
-import { Button } from "@/components/ui/button";
+import heroImg from "@/assets/students-hero.jpg";
 
 const Hero = () => {
   return (
-    <section className="relative min-h-[90vh] flex items-center overflow-hidden">
-      {/* Background image */}
-      <div className="absolute inset-0">
-        <img
-          src={campusHero}
-          alt="Greyston College campus aerial view"
-          className="w-full h-full object-cover"
-          loading="eager"
+    <section className="container-site">
+      <div
+        className="relative overflow-hidden rounded-[26px] my-4 min-h-[520px] border border-primary-foreground/10"
+        role="region"
+        aria-label="Greyston College hero"
+        style={{ boxShadow: "var(--shadow)" }}
+      >
+        {/* Background */}
+        <div
+          className="absolute inset-0 bg-cover bg-center scale-[1.02] saturate-[1.05] contrast-[1.02]"
+          style={{ backgroundImage: `url(${heroImg})` }}
+          aria-hidden="true"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-navy-deep/85 via-navy/70 to-navy-deep/40" />
-      </div>
+        <div
+          className="absolute inset-0"
+          style={{
+            background: "linear-gradient(90deg, rgba(11,31,58,.92) 0%, rgba(11,31,58,.82) 45%, rgba(11,31,58,.55) 100%)",
+          }}
+          aria-hidden="true"
+        />
 
-      {/* Content */}
-      <div className="relative z-10 section-padding py-32 md:py-40 max-w-3xl">
-        <p className="font-body text-gold font-semibold text-sm md:text-base tracking-widest uppercase mb-4">
-          Estd. 2024 — Achieving Excellence Together
-        </p>
-        <h1 className="font-display text-4xl md:text-6xl lg:text-7xl font-bold text-primary-foreground leading-tight mb-6">
-          Shape Your <span className="italic text-gold-light">Future</span> at Greystone
-        </h1>
-        <p className="font-body text-primary-foreground/80 text-lg md:text-xl max-w-xl mb-10 leading-relaxed">
-          A world-class education that empowers you to think critically, lead boldly, and make a lasting impact on the world.
-        </p>
-        <div className="flex flex-col sm:flex-row gap-4">
-          <Button variant="gold" size="lg" className="text-base px-8">
-            Explore Programs
-          </Button>
-          <Button variant="heroOutline" size="lg" className="text-base px-8">
-            Book a Campus Tour
-          </Button>
+        {/* Content */}
+        <div className="relative grid grid-cols-1 lg:grid-cols-[1.2fr_0.8fr] gap-7 p-10 lg:p-14">
+          <div>
+            <span className="pill">Achieving Excellence Together</span>
+            <h1 className="font-display text-[clamp(2.2rem,4vw,3.2rem)] text-primary-foreground mt-2 mb-0">
+              Greyston College
+            </h1>
+            <p className="text-primary-foreground/90 text-[1.05rem] leading-relaxed mt-4 mb-6">
+              A premium, STEM-focused learning institution in <b>Ruwa, Zimbabwe</b> — offering both{" "}
+              <b>Secondary School</b> and <b>College &amp; Skills</b> pathways, built on discipline, character, and
+              academic excellence.
+            </p>
+            <div className="flex gap-3 flex-wrap">
+              <a href="#admissions" className="btn-site-primary">Apply Now</a>
+              <a href="#contact" className="btn-hero-outline">Request Information</a>
+              <a href="#contact" className="btn-site-gold">Book a Visit</a>
+            </div>
+          </div>
+
+          <div className="flex flex-col gap-3.5">
+            {[
+              { title: "Secondary School", desc: "Rigorous academic preparation with a strong STEM foundation." },
+              {
+                title: "College & Skills",
+                desc: "Practical, career-ready programmes in technology, business and leadership.",
+              },
+              {
+                title: "Boarding & Growth Vision",
+                desc: "Expanding facilities to support modern labs, ICT, sports and boarding for 100 students.",
+              },
+            ].map((item) => (
+              <div
+                key={item.title}
+                className="p-4 rounded-[18px] border border-primary-foreground/15 bg-primary-foreground/[0.08]"
+              >
+                <b className="text-primary-foreground">{item.title}</b>
+                <p className="text-primary-foreground/80 text-[0.95rem] mt-1.5 mb-0">{item.desc}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>
