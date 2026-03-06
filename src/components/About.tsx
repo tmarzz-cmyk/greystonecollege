@@ -32,7 +32,7 @@ const About = () => {
             A Legacy of Learning
           </h2>
           <p className="font-body text-muted-foreground text-lg leading-relaxed mb-6">
-            Since 1948, Greyston College has been committed to providing transformative education that blends rigorous academics with real-world experience. Our diverse community of scholars, researchers, and innovators drives meaningful change.
+            Since 2024, Greystone College has been committed to providing transformative education that blends rigorous academics with real-world experience. Our diverse community of scholars, researchers, and innovators drives meaningful change.
           </p>
           <p className="font-body text-muted-foreground leading-relaxed mb-10">
             With state-of-the-art facilities, an award-winning faculty, and a vibrant campus culture, we empower every student to reach their full potential and make a positive impact on the world.
