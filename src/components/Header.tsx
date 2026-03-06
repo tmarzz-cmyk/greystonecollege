@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
+import logo from "@/assets/logo.jpg";
 
 const navLinks = [
   { label: "Programs", href: "#programs" },
@@ -16,8 +17,8 @@ const Header = () => {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b">
       <div className="section-padding flex items-center justify-between h-16 md:h-20">
-        <a href="#" className="font-display text-xl md:text-2xl font-bold tracking-tight text-foreground">
-          Greyston <span className="text-gold">College</span>
+        <a href="#" className="flex items-center gap-2">
+          <img src={logo} alt="Greystone College" className="h-10 md:h-14 w-auto" />
         </a>
 
         {/* Desktop nav */}

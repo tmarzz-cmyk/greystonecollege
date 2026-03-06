@@ -18,10 +18,10 @@ const Hero = () => {
       {/* Content */}
       <div className="relative z-10 section-padding py-32 md:py-40 max-w-3xl">
         <p className="font-body text-gold font-semibold text-sm md:text-base tracking-widest uppercase mb-4">
-          Est. 1948 — Excellence in Education
+          Estd. 2024 — Achieving Excellence Together
         </p>
         <h1 className="font-display text-4xl md:text-6xl lg:text-7xl font-bold text-primary-foreground leading-tight mb-6">
-          Shape Your <span className="italic text-gold-light">Future</span> at Greyston
+          Shape Your <span className="italic text-gold-light">Future</span> at Greystone
         </h1>
         <p className="font-body text-primary-foreground/80 text-lg md:text-xl max-w-xl mb-10 leading-relaxed">
           A world-class education that empowers you to think critically, lead boldly, and make a lasting impact on the world.

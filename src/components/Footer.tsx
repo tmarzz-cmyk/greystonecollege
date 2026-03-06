@@ -1,4 +1,5 @@
 import { Mail, Phone, MapPin } from "lucide-react";
+import logo from "@/assets/logo.jpg";
 
 const Footer = () => {
   return (
@@ -7,11 +8,9 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
           {/* Brand */}
           <div>
-            <h3 className="font-display text-2xl font-bold mb-4">
-              Greyston <span className="text-gold">College</span>
-            </h3>
+            <img src={logo} alt="Greystone College" className="h-16 w-auto mb-4" />
             <p className="font-body text-primary-foreground/60 text-sm leading-relaxed">
-              Empowering minds since 1948. A community dedicated to academic excellence and personal growth.
+              Achieving Excellence Together. A community dedicated to academic excellence and personal growth.
             </p>
           </div>
 
