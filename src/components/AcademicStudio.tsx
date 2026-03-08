@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { X, ChevronLeft, ChevronRight, ZoomIn } from "lucide-react";
+import AnimatedSection from "./AnimatedSection";
 import academic1 from "@/assets/academic-prefects-class.png";
 import academic2 from "@/assets/academic-students-outdoor.png";
 import academic3 from "@/assets/academic-prefects-meeting.png";
@@ -101,13 +102,15 @@ const AcademicStudio = () => {
     <>
       <section id="academic-studio" className="py-20 md:py-24">
         <div className="container-site">
-          <p className="text-xs tracking-[0.3em] uppercase text-center mb-3 font-medium" style={{ color: "hsl(var(--sand))" }}>Student Life</p>
-          <h2 className="section-title">Academic Studio</h2>
-          <div className="premium-divider" />
-          <p className="section-intro">
-            A glimpse into the daily academic life and student leadership at Greystone College, 
-            where we nurture the next generation of innovators and leaders.
-          </p>
+          <AnimatedSection>
+            <p className="text-xs tracking-[0.3em] uppercase text-center mb-3 font-medium" style={{ color: "hsl(var(--sand))" }}>Student Life</p>
+            <h2 className="section-title">Academic Studio</h2>
+            <div className="premium-divider" />
+            <p className="section-intro">
+              A glimpse into the daily academic life and student leadership at Greystone College, 
+              where we nurture the next generation of innovators and leaders.
+            </p>
+          </AnimatedSection>
 
           {/* Main Display */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">

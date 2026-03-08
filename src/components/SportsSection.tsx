@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { X, ChevronLeft, ChevronRight, ZoomIn } from "lucide-react";
+import AnimatedSection from "./AnimatedSection";
 import sportsRugby1 from "@/assets/sports-rugby-1.png";
 import sportsRugby2 from "@/assets/sports-rugby-2.png";
 import sportsBasketball from "@/assets/sports-basketball.png";
@@ -101,13 +102,15 @@ const SportsSection = () => {
     <>
       <section id="sports" className="py-20 md:py-24">
         <div className="container-site">
-          <p className="text-xs tracking-[0.3em] uppercase text-center mb-3 font-medium" style={{ color: "hsl(var(--sand))" }}>Athletics</p>
-          <h2 className="section-title">Sports &amp; Athletics</h2>
-          <div className="premium-divider" />
-          <p className="section-intro">
-            Greystone College champions athletic excellence through a diverse sports programme. 
-            Our students compete with pride in official school colours.
-          </p>
+          <AnimatedSection>
+            <p className="text-xs tracking-[0.3em] uppercase text-center mb-3 font-medium" style={{ color: "hsl(var(--sand))" }}>Athletics</p>
+            <h2 className="section-title">Sports &amp; Athletics</h2>
+            <div className="premium-divider" />
+            <p className="section-intro">
+              Greystone College champions athletic excellence through a diverse sports programme. 
+              Our students compete with pride in official school colours.
+            </p>
+          </AnimatedSection>
 
           {/* Main Display */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
