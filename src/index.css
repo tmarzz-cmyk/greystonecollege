@@ -139,11 +139,7 @@
     border-color: #e8d6af;
   }
 
-  .site-card {
-    @apply bg-card rounded-[var(--radius)] border;
-    box-shadow: var(--shadow);
-    border-color: hsl(var(--border));
-  }
+  /* site-card defined below with premium styles */
 
   .site-card-soft {
     @apply site-card;
