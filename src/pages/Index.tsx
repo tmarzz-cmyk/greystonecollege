@@ -24,6 +24,7 @@ const Index = () => {
         <CampusSection />
         <UniformSection />
         <SportsSection />
+        <InspirationSection />
         <Partnerships />
         <Admissions />
         <ContactSection />
