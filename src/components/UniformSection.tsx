@@ -1,7 +1,8 @@
+import { motion } from "framer-motion";
 import blazerStudent from "@/assets/blazer-student.png";
 import blazerPrefect from "@/assets/blazer-prefect.png";
 import backpacks from "@/assets/backpacks.png";
-import AnimatedSection, { StaggerContainer, StaggerItem } from "./AnimatedSection";
+import AnimatedSection, { StaggerContainer, StaggerItem, HoverCard } from "./AnimatedSection";
 
 const items = [
   { img: blazerStudent, alt: "Greystone College dark turquoise student blazer with official crest", title: "Student Blazer", desc: "Dark Turquoise / Airforce Blue blazer with the official Greystone College crest." },
@@ -26,15 +27,24 @@ const UniformSection = () => {
         <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-7" staggerDelay={0.15}>
           {items.map((item) => (
             <StaggerItem key={item.title}>
-              <div className="site-card overflow-hidden group">
-                <div className="overflow-hidden bg-white">
-                  <img src={item.img} alt={item.alt} className="w-full h-80 object-contain p-6 transition-transform duration-500 group-hover:scale-105" loading="lazy" />
+              <HoverCard>
+                <div className="site-card overflow-hidden group">
+                  <div className="overflow-hidden bg-white">
+                    <motion.img
+                      src={item.img}
+                      alt={item.alt}
+                      className="w-full h-80 object-contain p-6"
+                      loading="lazy"
+                      whileHover={{ scale: 1.1, rotate: 2 }}
+                      transition={{ duration: 0.5 }}
+                    />
+                  </div>
+                  <div className="p-6">
+                    <h3 className="font-bold text-lg mb-1.5" style={{ color: "hsl(var(--turquoise-dark))" }}>{item.title}</h3>
+                    <p className="text-muted-foreground text-sm leading-relaxed">{item.desc}</p>
+                  </div>
                 </div>
-                <div className="p-6">
-                  <h3 className="font-bold text-lg mb-1.5" style={{ color: "hsl(var(--turquoise-dark))" }}>{item.title}</h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed">{item.desc}</p>
-                </div>
-              </div>
+              </HoverCard>
             </StaggerItem>
           ))}
         </StaggerContainer>
