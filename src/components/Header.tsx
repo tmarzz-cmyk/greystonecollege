@@ -31,7 +31,7 @@ const Header = () => {
       <header
         className="site-header relative overflow-hidden"
         style={{
-          background: `linear-gradient(160deg, rgba(10,79,82,0.94), rgba(15,111,115,0.88) 50%, rgba(10,79,82,0.92)), url(${studentsIct}) center/cover no-repeat`,
+          background: `linear-gradient(160deg, rgba(10,79,82,0.94), rgba(15,111,115,0.88) 50%, rgba(10,79,82,0.92)), url(${heroStudents}) center/cover no-repeat`,
         }}
       >
         {/* Subtle decorative gradient overlay */}
