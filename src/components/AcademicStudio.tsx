@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { X, ChevronLeft, ChevronRight, ZoomIn } from "lucide-react";
+import AnimatedSection from "./AnimatedSection";
 import academic1 from "@/assets/academic-prefects-class.png";
 import academic2 from "@/assets/academic-students-outdoor.png";
 import academic3 from "@/assets/academic-prefects-meeting.png";

@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { X, ChevronLeft, ChevronRight, ZoomIn } from "lucide-react";
+import AnimatedSection from "./AnimatedSection";
 import sportsRugby1 from "@/assets/sports-rugby-1.png";
 import sportsRugby2 from "@/assets/sports-rugby-2.png";
 import sportsBasketball from "@/assets/sports-basketball.png";
