@@ -3,20 +3,37 @@ import { Volume2, VolumeX } from "lucide-react";
 
 const BackgroundMusic = () => {
   const audioRef = useRef<HTMLAudioElement>(null);
-  const [muted, setMuted] = useState(true);
+  const [muted, setMuted] = useState(false);
   const [started, setStarted] = useState(false);
 
+  useEffect(() => {
+    const audio = audioRef.current;
+    if (!audio) return;
+    audio.volume = 0.08;
+
+    // Try autoplay immediately
+    const tryPlay = () => {
+      audio.play().then(() => setStarted(true)).catch(() => {
+        // Autoplay blocked — start on first user interaction
+        const startOnInteraction = () => {
+          audio.play().then(() => setStarted(true)).catch(() => {});
+          document.removeEventListener("click", startOnInteraction);
+          document.removeEventListener("scroll", startOnInteraction);
+          document.removeEventListener("keydown", startOnInteraction);
+        };
+        document.addEventListener("click", startOnInteraction, { once: false });
+        document.addEventListener("scroll", startOnInteraction, { once: false });
+        document.addEventListener("keydown", startOnInteraction, { once: false });
+      });
+    };
+    tryPlay();
+  }, []);
+
   const toggleMute = () => {
-    if (!started && audioRef.current) {
-      audioRef.current.volume = 0.08;
-      audioRef.current.play().catch(() => {});
-      setStarted(true);
-      setMuted(false);
-      return;
-    }
     if (audioRef.current) {
-      audioRef.current.muted = !muted;
-      setMuted(!muted);
+      const newMuted = !muted;
+      audioRef.current.muted = newMuted;
+      setMuted(newMuted);
     }
   };
 
