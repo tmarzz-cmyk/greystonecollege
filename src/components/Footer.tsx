@@ -2,12 +2,12 @@ import logo from "@/assets/logo.jpg";
 
 const Footer = () => {
   return (
-    <footer className="border-t py-8">
-      <div className="container-site flex flex-col items-center text-center gap-3">
-        <img src={logo} alt="Greystone College logo" className="w-[52px] h-[52px] rounded-full object-cover" />
-        <b className="font-display text-navy text-lg">Greystone College</b>
-        <div className="text-sm text-muted-foreground">Achieving Excellence Together</div>
-        <div className="text-sm text-muted-foreground italic">Kubudirira Mukurumbira Tiri Pamwechete</div>
+    <footer className="mt-10 py-10" style={{ background: "hsl(var(--turquoise-dark))", color: "white" }}>
+      <div className="container-site text-center">
+        <img src={logo} alt="Greystone College logo" className="w-[72px] h-[72px] mx-auto mb-3.5 rounded-full object-cover" />
+        <p className="font-bold text-lg">Greystone College</p>
+        <p className="mt-2">Achieving Excellence Together</p>
+        <p className="italic mt-2 text-white/80">Kubudirira Mukurumbira Tiri Pamwechete</p>
       </div>
     </footer>
   );

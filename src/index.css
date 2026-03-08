@@ -1,49 +1,51 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@600;700&display=swap');
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   :root {
-    --background: 40 14% 96%;
-    --foreground: 215 28% 17%;
+    --background: 40 20% 96%;
+    --foreground: 220 20% 15%;
 
     --card: 0 0% 100%;
-    --card-foreground: 215 28% 17%;
+    --card-foreground: 220 20% 15%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 215 28% 17%;
+    --popover-foreground: 220 20% 15%;
 
-    --primary: 178 76% 25%;
+    --primary: 182 76% 25%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 40 33% 92%;
-    --secondary-foreground: 178 76% 25%;
+    --secondary: 40 40% 90%;
+    --secondary-foreground: 182 76% 25%;
 
-    --muted: 40 14% 92%;
-    --muted-foreground: 218 12% 40%;
+    --muted: 220 8% 92%;
+    --muted-foreground: 218 10% 40%;
 
-    --accent: 42 73% 47%;
-    --accent-foreground: 178 76% 25%;
+    --accent: 40 55% 62%;
+    --accent-foreground: 182 80% 19%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 214 20% 90%;
-    --input: 214 20% 90%;
-    --ring: 178 76% 25%;
+    --border: 0 0% 85%;
+    --input: 0 0% 85%;
+    --ring: 182 76% 25%;
 
-    --radius: 1.125rem;
+    --radius: 18px;
 
-    --navy: 178 76% 25%;
-    --navy-deep: 178 80% 20%;
-    --gold: 42 73% 47%;
-    --gold-light: 42 60% 65%;
-    --off-white: 40 14% 96%;
-    --gray: 218 12% 40%;
+    --turquoise: 182 76% 25%;
+    --turquoise-dark: 182 80% 19%;
+    --sand: 40 55% 62%;
+    --sand-light: 38 60% 90%;
+    --navy: 182 76% 25%;
+    --navy-deep: 182 80% 19%;
+    --gold: 40 55% 62%;
+    --gold-light: 38 60% 78%;
+    --off-white: 40 20% 96%;
+    --gray: 218 10% 40%;
 
-    --shadow: 0 10px 30px rgba(11, 31, 58, 0.12);
+    --shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
@@ -52,40 +54,37 @@
     --sidebar-accent: 240 4.8% 95.9%;
     --sidebar-accent-foreground: 240 5.9% 10%;
     --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
-
-    --font-display: 'Playfair Display', serif;
-    --font-body: 'Inter', system-ui, -apple-system, sans-serif;
+    --sidebar-ring: 217 91% 60%;
   }
 
   .dark {
-    --background: 178 50% 6%;
+    --background: 182 50% 6%;
     --foreground: 40 14% 92%;
-    --card: 178 40% 10%;
+    --card: 182 40% 10%;
     --card-foreground: 40 14% 92%;
-    --popover: 178 40% 10%;
+    --popover: 182 40% 10%;
     --popover-foreground: 40 14% 92%;
-    --primary: 42 73% 47%;
-    --primary-foreground: 214 64% 6%;
-    --secondary: 214 30% 18%;
+    --primary: 40 55% 62%;
+    --primary-foreground: 220 20% 8%;
+    --secondary: 220 30% 18%;
     --secondary-foreground: 40 14% 92%;
-    --muted: 214 25% 16%;
+    --muted: 220 25% 16%;
     --muted-foreground: 40 10% 60%;
-    --accent: 42 73% 47%;
-    --accent-foreground: 214 64% 6%;
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-    --border: 214 25% 20%;
-    --input: 214 25% 20%;
-    --ring: 42 73% 47%;
+    --accent: 40 55% 62%;
+    --accent-foreground: 220 20% 8%;
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 220 25% 20%;
+    --input: 220 25% 20%;
+    --ring: 40 55% 62%;
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary: 224 76% 48%;
     --sidebar-primary-foreground: 0 0% 100%;
     --sidebar-accent: 240 3.7% 15.9%;
     --sidebar-accent-foreground: 240 4.8% 95.9%;
     --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-ring: 217 91% 60%;
   }
 }
 
@@ -96,88 +95,142 @@
 
   body {
     @apply bg-background text-foreground;
-    font-family: var(--font-body);
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
   }
 
-  h1, h2, h3, h4, h5, h6 {
-    font-family: var(--font-display);
+  html {
+    scroll-behavior: smooth;
   }
 }
 
 @layer components {
   .container-site {
-    @apply w-[min(1120px,92vw)] mx-auto;
+    @apply w-[min(1180px,92vw)] mx-auto;
+  }
+
+  .topbar {
+    background: hsl(var(--turquoise-dark));
+    color: white;
+    font-size: 0.95rem;
+  }
+
+  .topbar-inner {
+    @apply flex flex-wrap gap-3 justify-center py-2.5 text-center;
+    gap: 12px 24px;
+  }
+
+  .site-header {
+    color: white;
+    padding-bottom: 32px;
   }
 
   .pill {
     @apply inline-flex gap-2 items-center py-1.5 px-3 rounded-full text-sm border;
-    background: rgba(201, 162, 39, 0.12);
-    color: hsl(var(--navy));
-    border-color: rgba(201, 162, 39, 0.25);
+    background: rgba(214, 179, 106, 0.18);
+    color: white;
+    border-color: rgba(255, 255, 255, 0.15);
   }
 
   .badge-tag {
-    @apply inline-flex items-center gap-1.5 py-1 px-2.5 rounded-full text-xs border;
-    background: rgba(11, 31, 58, 0.08);
-    color: hsl(var(--navy));
-    border-color: rgba(11, 31, 58, 0.1);
+    @apply inline-flex items-center gap-1.5 py-1.5 px-3 rounded-full text-sm font-bold border;
+    background: hsl(var(--sand-light));
+    color: hsl(var(--turquoise-dark));
+    border-color: #e8d6af;
   }
 
   .site-card {
     @apply bg-card rounded-[var(--radius)] border;
     box-shadow: var(--shadow);
-    border-color: rgba(15, 23, 42, 0.08);
+    border-color: hsl(var(--border));
+  }
+
+  .site-card-soft {
+    @apply site-card;
+    background: hsl(var(--sand-light));
   }
 
   .btn-site {
-    @apply inline-flex items-center justify-center gap-2.5 py-3.5 px-5 rounded-full border border-transparent font-semibold cursor-pointer transition-all text-sm;
+    @apply inline-flex items-center justify-center gap-2.5 py-3 px-5 rounded-full border border-transparent font-bold cursor-pointer transition-all text-sm;
+    box-shadow: var(--shadow);
   }
 
   .btn-site-primary {
     @apply btn-site;
-    background: hsl(var(--navy));
-    color: hsl(var(--primary-foreground));
+    background: hsl(var(--sand));
+    color: #1f1f1f;
   }
   .btn-site-primary:hover {
-    transform: translateY(-1px);
+    transform: translateY(-2px);
+  }
+
+  .btn-site-secondary {
+    @apply btn-site;
+    background: rgba(255, 255, 255, 0.14);
+    color: white;
+    border-color: rgba(255, 255, 255, 0.22);
+  }
+  .btn-site-secondary:hover {
+    background: rgba(255, 255, 255, 0.2);
   }
 
   .btn-site-outline {
     @apply btn-site;
     background: transparent;
-    color: hsl(var(--navy));
-    border-color: rgba(11, 31, 58, 0.22);
+    color: hsl(var(--turquoise-dark));
+    border-color: hsl(var(--border));
   }
   .btn-site-outline:hover {
-    background: rgba(11, 31, 58, 0.06);
+    background: rgba(15, 111, 115, 0.06);
   }
 
   .btn-site-gold {
     @apply btn-site;
-    background: hsl(var(--gold));
-    color: hsl(var(--navy));
+    background: hsl(var(--sand));
+    color: hsl(var(--turquoise-dark));
   }
   .btn-site-gold:hover {
-    transform: translateY(-1px);
-  }
-
-  .btn-hero-outline {
-    @apply btn-site;
-    background: transparent;
-    color: hsl(var(--primary-foreground));
-    border-color: rgba(255, 255, 255, 0.35);
-  }
-  .btn-hero-outline:hover {
-    background: rgba(255, 255, 255, 0.08);
+    transform: translateY(-2px);
   }
 
   .input-site {
-    @apply w-full py-3.5 px-4 rounded-[14px] border outline-none font-[inherit];
-    border-color: rgba(11, 31, 58, 0.18);
+    @apply w-full py-3.5 px-4 rounded-[14px] border outline-none;
+    border-color: hsl(var(--border));
     background: rgba(255, 255, 255, 0.9);
+    font: inherit;
   }
 
   .section-heading {
     @apply flex justify-between items-end gap-4 flex-wrap;
+  }
+
+  .section-title {
+    @apply text-center mb-4;
+    color: hsl(var(--turquoise-dark));
+    font-size: clamp(1.7rem, 3vw, 2.5rem);
+    font-weight: bold;
+  }
+
+  .section-intro {
+    @apply max-w-[820px] mx-auto text-center mb-9;
+    color: hsl(var(--gray));
+  }
+
+  .subject-chip {
+    @apply bg-card border rounded-[14px] py-4 px-3 text-center font-bold;
+    color: hsl(var(--turquoise-dark));
+    box-shadow: var(--shadow);
+    border-color: hsl(var(--border));
+  }
+
+  .house-tag {
+    @apply inline-block rounded-full py-1.5 px-3 text-sm font-bold mr-2 mb-2;
+    background: hsl(var(--sand-light));
+    color: hsl(var(--turquoise-dark));
+    border: 1px solid #e8d6af;
+  }
+
+  .soft-bg {
+    background: hsl(var(--sand-light));
   }
 }
