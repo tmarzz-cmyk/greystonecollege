@@ -126,13 +126,9 @@ const SportsSection = () => {
               onClick={() => setSelectedIndex(index)}
               className={`relative overflow-hidden rounded-lg transition-all duration-300 ${
                 selectedIndex === index 
-                  ? "ring-2 ring-offset-2 scale-105" 
+                  ? "ring-2 ring-[hsl(var(--turquoise-dark))] ring-offset-2 ring-offset-background scale-105" 
                   : "opacity-70 hover:opacity-100"
               }`}
-              style={{ 
-                ringColor: selectedIndex === index ? "hsl(var(--turquoise-dark))" : undefined,
-                ringOffsetColor: "hsl(var(--background))"
-              }}
             >
               <img 
                 src={item.img} 
@@ -140,12 +136,6 @@ const SportsSection = () => {
                 className="w-full h-20 md:h-28 object-cover"
                 loading="lazy"
               />
-              {selectedIndex === index && (
-                <div 
-                  className="absolute inset-0 border-2 rounded-lg pointer-events-none"
-                  style={{ borderColor: "hsl(var(--turquoise-dark))" }}
-                />
-              )}
             </button>
           ))}
         </div>
