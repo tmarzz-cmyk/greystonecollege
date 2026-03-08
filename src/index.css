@@ -233,4 +233,64 @@
   .soft-bg {
     background: hsl(var(--sand-light));
   }
+
+  /* Premium utilities */
+  .premium-divider {
+    @apply mx-auto my-10;
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, hsl(var(--turquoise)), hsl(var(--sand)));
+    border-radius: 2px;
+  }
+
+  .section-title {
+    @apply text-center mb-2;
+    color: hsl(var(--turquoise-dark));
+    font-size: clamp(1.7rem, 3vw, 2.5rem);
+    font-weight: bold;
+    letter-spacing: -0.01em;
+  }
+
+  .section-intro {
+    @apply max-w-[820px] mx-auto text-center mb-10;
+    color: hsl(var(--gray));
+    font-size: 1.08rem;
+    line-height: 1.75;
+  }
+
+  .site-card {
+    @apply bg-card rounded-[var(--radius)] border;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    border-color: hsl(var(--border));
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .site-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
+  }
+
+  .subject-chip {
+    @apply bg-card border rounded-[14px] py-4 px-3 text-center font-bold;
+    color: hsl(var(--turquoise-dark));
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+    border-color: hsl(var(--border));
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+  }
+
+  .subject-chip:hover {
+    transform: translateY(-2px) scale(1.03);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  }
+
+  .stagger-1 { animation-delay: 0.05s; }
+  .stagger-2 { animation-delay: 0.1s; }
+  .stagger-3 { animation-delay: 0.15s; }
+  .stagger-4 { animation-delay: 0.2s; }
+  .stagger-5 { animation-delay: 0.25s; }
+  .stagger-6 { animation-delay: 0.3s; }
+  .stagger-7 { animation-delay: 0.35s; }
+  .stagger-8 { animation-delay: 0.4s; }
+  .stagger-9 { animation-delay: 0.45s; }
+  .stagger-10 { animation-delay: 0.5s; }
 }
