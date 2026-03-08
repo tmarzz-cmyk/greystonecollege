@@ -117,13 +117,23 @@ const AcademicStudio = () => {
                 <h3 className="font-bold text-lg mb-4" style={{ color: "hsl(var(--turquoise-dark))" }}>
                   Curriculum & Learning
                 </h3>
-                <div className="space-y-3 text-muted-foreground leading-relaxed">
+                <div className="space-y-4 text-muted-foreground leading-relaxed">
                   <p>
-                    Our academic programme focuses on Forms 1 through 3, offering a balanced and comprehensive curriculum designed to build strong foundations.
+                    Our academic programme offers a balanced and comprehensive curriculum designed to build strong foundations across core subjects including English Language, Mathematics, Sciences, Humanities, and Computer Studies/ICT.
                   </p>
-                  <p>
-                    Students engage in core subjects including English Language, Mathematics, Sciences (Biology, Chemistry, Physics, Combined Science), Humanities (Geography, History, Heritage Studies, Shona), and Computer Studies/ICT in our modern laboratories.
-                  </p>
+                  <div className="rounded-lg p-4 border" style={{ borderColor: "hsl(var(--sand) / 0.3)", background: "hsl(var(--sand) / 0.06)" }}>
+                    <p className="font-semibold text-sm mb-2" style={{ color: "hsl(var(--turquoise-dark))" }}>Enrolment Structure</p>
+                    <div className="space-y-2 text-sm">
+                      <div className="flex items-start gap-3">
+                        <span className="font-bold whitespace-nowrap px-2 py-0.5 rounded text-xs" style={{ background: "hsl(var(--sand) / 0.15)", color: "hsl(var(--turquoise-dark))" }}>2025</span>
+                        <span>Currently enrolling <strong>Forms 1 – 3</strong></span>
+                      </div>
+                      <div className="flex items-start gap-3">
+                        <span className="font-bold whitespace-nowrap px-2 py-0.5 rounded text-xs" style={{ background: "hsl(var(--sand) / 0.15)", color: "hsl(var(--turquoise-dark))" }}>2027 Term 1</span>
+                        <span>Expanding to <strong>Forms 1 – 5</strong></span>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
 
