@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Menu, X, ChevronDown } from "lucide-react";
 import logo from "@/assets/crest-official.png";
-import studentsIct from "@/assets/students-ict.jpg";
+import heroStudents from "@/assets/students-campus-life.png";
 
 const navLinks = [
   { label: "About", href: "#about" },
@@ -31,7 +31,7 @@ const Header = () => {
       <header
         className="site-header relative overflow-hidden"
         style={{
-          background: `linear-gradient(160deg, rgba(10,79,82,0.94), rgba(15,111,115,0.88) 50%, rgba(10,79,82,0.92)), url(${studentsIct}) center/cover no-repeat`,
+          background: `linear-gradient(160deg, rgba(10,79,82,0.94), rgba(15,111,115,0.88) 50%, rgba(10,79,82,0.92)), url(${heroStudents}) center/cover no-repeat`,
         }}
       >
         {/* Subtle decorative gradient overlay */}
