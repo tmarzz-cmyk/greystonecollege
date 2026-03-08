@@ -115,16 +115,14 @@ const AcademicStudio = () => {
             <div className="flex flex-col justify-center order-2 lg:order-1">
               <div className="site-card p-7 mb-6">
                 <h3 className="font-bold text-lg mb-4" style={{ color: "hsl(var(--turquoise-dark))" }}>
-                  Active Learning
+                  Curriculum & Learning
                 </h3>
                 <div className="space-y-3 text-muted-foreground leading-relaxed">
                   <p>
-                    Our approach to education goes beyond textbook theory. We emphasize practical application, 
-                    critical thinking, and collaborative problem-solving across all subjects.
+                    Our academic programme focuses on Forms 1 through 3, offering a balanced and comprehensive curriculum designed to build strong foundations.
                   </p>
                   <p>
-                    From modern science laboratories to interactive classroom discussions, 
-                    students are encouraged to explore, question, and discover.
+                    Students engage in core subjects including English Language, Mathematics, Sciences (Biology, Chemistry, Physics, Combined Science), Humanities (Geography, History, Heritage Studies, Shona), and Computer Studies/ICT in our modern laboratories.
                   </p>
                 </div>
               </div>
