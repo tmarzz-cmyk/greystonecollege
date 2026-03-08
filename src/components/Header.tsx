@@ -8,6 +8,7 @@ const navLinks = [
   { label: "Academics", href: "#academics" },
   { label: "Campus", href: "#campus" },
   { label: "Uniform", href: "#uniform" },
+  { label: "Sports", href: "#sports" },
   { label: "Partnerships", href: "#partnerships" },
   { label: "Admissions", href: "#admissions" },
   { label: "Contact", href: "#contact" },
