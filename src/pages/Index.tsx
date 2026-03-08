@@ -5,6 +5,7 @@ import AcademicStudio from "@/components/AcademicStudio";
 import CampusSection from "@/components/CampusSection";
 import UniformSection from "@/components/UniformSection";
 import SportsSection from "@/components/SportsSection";
+import InspirationSection from "@/components/InspirationSection";
 import Partnerships from "@/components/Partnerships";
 import Admissions from "@/components/Admissions";
 import ContactSection from "@/components/ContactSection";
