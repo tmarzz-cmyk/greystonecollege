@@ -2,8 +2,8 @@ import crest from "@/assets/crest-official.png";
 import AnimatedSection, { StaggerContainer, StaggerItem } from "./AnimatedSection";
 
 const subjects = [
-  "English Language", "Mathematics", "Shona", "Heritage Studies", "Geography", "History",
-  "Biology", "Chemistry", "Physics", "Combined Science", "Computer Studies", "ICT",
+  "English Language", "Mathematics", "Shona", "Ndebele", "Heritage Studies", "Geography", "History",
+  "Biology", "Chemistry", "Physics", "Combined Science", "Business Studies", "Computer Studies", "ICT",
 ];
 
 const crestSymbols = [
