@@ -3,6 +3,7 @@ import AboutSection from "@/components/AboutSection";
 import Academics from "@/components/Academics";
 import CampusSection from "@/components/CampusSection";
 import UniformSection from "@/components/UniformSection";
+import SportsSection from "@/components/SportsSection";
 import Partnerships from "@/components/Partnerships";
 import Admissions from "@/components/Admissions";
 import ContactSection from "@/components/ContactSection";
@@ -19,6 +20,7 @@ const Index = () => {
         <Academics />
         <CampusSection />
         <UniformSection />
+        <SportsSection />
         <Partnerships />
         <Admissions />
         <ContactSection />
