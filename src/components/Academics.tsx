@@ -1,5 +1,3 @@
-import studentsIct from "@/assets/students-ict.jpg";
-
 const subjects = [
   "English Language", "Mathematics", "Heritage Studies", "Geography", "History",
   "Biology", "Chemistry", "Physics", "Computer Studies", "ICT",
