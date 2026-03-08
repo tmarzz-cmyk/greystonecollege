@@ -1,11 +1,10 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
-import Highlights from "@/components/Highlights";
 import AboutSection from "@/components/AboutSection";
 import Academics from "@/components/Academics";
+import Houses from "@/components/Houses";
+import Partnerships from "@/components/Partnerships";
 import Admissions from "@/components/Admissions";
-import StudentLife from "@/components/StudentLife";
-import NewsEvents from "@/components/NewsEvents";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 
@@ -15,12 +14,11 @@ const Index = () => {
       <Header />
       <main>
         <Hero />
-        <Highlights />
         <AboutSection />
         <Academics />
+        <Houses />
+        <Partnerships />
         <Admissions />
-        <StudentLife />
-        <NewsEvents />
         <ContactSection />
       </main>
       <Footer />
