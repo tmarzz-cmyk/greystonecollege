@@ -6,6 +6,7 @@ import studentsIct from "@/assets/students-ict.jpg";
 const navLinks = [
   { label: "About", href: "#about" },
   { label: "Academics", href: "#academics" },
+  { label: "Student Life", href: "#academic-studio" },
   { label: "Campus", href: "#campus" },
   { label: "Uniform", href: "#uniform" },
   { label: "Sports", href: "#sports" },
