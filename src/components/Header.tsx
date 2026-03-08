@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Menu, X, ChevronDown } from "lucide-react";
 import logo from "@/assets/crest-official.png";
-import studentsIct from "@/assets/students-ict.jpg";
+import heroStudents from "@/assets/students-campus-life.png";
 
 const navLinks = [
   { label: "About", href: "#about" },
