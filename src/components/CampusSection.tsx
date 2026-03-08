@@ -1,5 +1,5 @@
 import gateDesigns from "@/assets/gate-designs.png";
-import studentsIct from "@/assets/students-ict.jpg";
+import studentsIct from "@/assets/students-science-lab.png";
 
 const CampusSection = () => {
   return (
