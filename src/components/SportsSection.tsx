@@ -249,6 +249,9 @@ const SportsSection = () => {
           <div 
             className="max-w-[90vw] max-h-[85vh] relative"
             onClick={(e) => e.stopPropagation()}
+            onTouchStart={onTouchStart}
+            onTouchMove={onTouchMove}
+            onTouchEnd={onTouchEndHandler}
           >
             <img 
               key={`lightbox-${selectedIndex}`}
