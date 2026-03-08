@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
-import logo from "@/assets/logo.jpg";
+import logo from "@/assets/crest-official.png";
 import studentsIct from "@/assets/students-ict.jpg";
 
 const navLinks = [
@@ -18,7 +18,6 @@ const Header = () => {
 
   return (
     <>
-      {/* Topbar */}
       <div className="topbar">
         <div className="container-site topbar-inner">
           <div>Ruwa, Zimbabwe</div>
@@ -27,7 +26,6 @@ const Header = () => {
         </div>
       </div>
 
-      {/* Site Header with background image */}
       <header
         className="site-header relative"
         style={{
@@ -35,7 +33,6 @@ const Header = () => {
         }}
       >
         <div className="container-site">
-          {/* Brand Row */}
           <div className="flex items-center justify-between gap-5 py-4 flex-wrap">
             <a href="#home" className="flex items-center gap-4" aria-label="Greystone College Home">
               <img
@@ -50,7 +47,6 @@ const Header = () => {
               </div>
             </a>
 
-            {/* Desktop Nav */}
             <nav
               className="hidden lg:flex flex-wrap gap-2.5 items-center rounded-full px-3.5 py-2.5"
               aria-label="Main Navigation"
@@ -71,13 +67,11 @@ const Header = () => {
               ))}
             </nav>
 
-            {/* Mobile toggle */}
             <button className="lg:hidden text-white" onClick={() => setMobileOpen(!mobileOpen)}>
               {mobileOpen ? <X size={28} /> : <Menu size={28} />}
             </button>
           </div>
 
-          {/* Mobile Nav */}
           {mobileOpen && (
             <div className="lg:hidden rounded-[22px] p-4 mb-4 flex flex-col gap-1" style={{ background: "rgba(214,179,106,0.18)", border: "1px solid rgba(255,255,255,0.15)" }}>
               {navLinks.map((link) => (
@@ -93,7 +87,6 @@ const Header = () => {
             </div>
           )}
 
-          {/* Hero */}
           <div className="py-12 text-center" id="home">
             <h2 className="text-[clamp(2rem,4vw,3.6rem)] leading-[1.1] text-white max-w-[900px] mx-auto mb-4 font-bold">
               Welcome to Greystone College
