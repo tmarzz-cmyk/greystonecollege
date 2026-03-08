@@ -7,11 +7,13 @@ import Partnerships from "@/components/Partnerships";
 import Admissions from "@/components/Admissions";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
+import BackgroundMusic from "@/components/BackgroundMusic";
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       <Header />
+      <BackgroundMusic />
       <main>
         <AboutSection />
         <Academics />
