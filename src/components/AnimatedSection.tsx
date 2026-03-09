@@ -1,5 +1,5 @@
 import { motion, type Variant, useMotionValue, useTransform, useScroll } from "framer-motion";
-import { type ReactNode, useRef } from "react";
+import { type ReactNode, useRef, forwardRef } from "react";
 
 type AnimationType = "fadeUp" | "fadeIn" | "scaleIn" | "slideLeft" | "slideRight" | "rotateIn" | "flipUp";
 
