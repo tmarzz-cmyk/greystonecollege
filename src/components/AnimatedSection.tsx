@@ -92,14 +92,15 @@ const staggerItem = {
   },
 };
 
-export const StaggerContainer = ({
+export const StaggerContainer = forwardRef<HTMLDivElement, StaggerContainerProps>(({
   children,
   className = "",
   staggerDelay = 0.1,
   once = true,
-}: StaggerContainerProps) => {
+}, ref) => {
   return (
     <motion.div
+      ref={ref}
       initial="hidden"
       whileInView="visible"
       viewport={{ once, margin: "-60px" }}
@@ -110,7 +111,8 @@ export const StaggerContainer = ({
       {children}
     </motion.div>
   );
-};
+});
+StaggerContainer.displayName = "StaggerContainer";
 
 export const StaggerItem = ({
   children,
