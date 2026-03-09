@@ -200,17 +200,18 @@ export const CountUp = ({ target, suffix = "", prefix = "", duration = 2, classN
 };
 
 // Floating animation for decorative elements
-export const Float = ({
-  children,
-  className = "",
-  delay = 0,
-}: {
+export const Float = forwardRef<HTMLDivElement, {
   children: ReactNode;
   className?: string;
   delay?: number;
-}) => {
+}>(({
+  children,
+  className = "",
+  delay = 0,
+}, ref) => {
   return (
     <motion.div
+      ref={ref}
       className={className}
       animate={{
         y: [-8, 8, -8],
@@ -225,6 +226,7 @@ export const Float = ({
       {children}
     </motion.div>
   );
-};
+});
+Float.displayName = "Float";
 
 export default AnimatedSection;
