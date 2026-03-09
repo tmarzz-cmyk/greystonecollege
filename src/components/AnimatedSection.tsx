@@ -1,5 +1,5 @@
 import { motion, type Variant, useMotionValue, useTransform, useScroll } from "framer-motion";
-import { type ReactNode, useRef } from "react";
+import { type ReactNode, useRef, forwardRef } from "react";
 
 type AnimationType = "fadeUp" | "fadeIn" | "scaleIn" | "slideLeft" | "slideRight" | "rotateIn" | "flipUp";
 
@@ -43,16 +43,17 @@ interface AnimatedSectionProps {
   once?: boolean;
 }
 
-const AnimatedSection = ({
+const AnimatedSection = forwardRef<HTMLDivElement, AnimatedSectionProps>(({
   children,
   animation = "fadeUp",
   delay = 0,
   duration = 0.7,
   className = "",
   once = true,
-}: AnimatedSectionProps) => {
+}, ref) => {
   return (
     <motion.div
+      ref={ref}
       initial="hidden"
       whileInView="visible"
       viewport={{ once, margin: "-80px" }}
@@ -63,8 +64,8 @@ const AnimatedSection = ({
       {children}
     </motion.div>
   );
-};
-
+});
+AnimatedSection.displayName = "AnimatedSection";
 // Staggered children container
 interface StaggerContainerProps {
   children: ReactNode;
@@ -91,14 +92,15 @@ const staggerItem = {
   },
 };
 
-export const StaggerContainer = ({
+export const StaggerContainer = forwardRef<HTMLDivElement, StaggerContainerProps>(({
   children,
   className = "",
   staggerDelay = 0.1,
   once = true,
-}: StaggerContainerProps) => {
+}, ref) => {
   return (
     <motion.div
+      ref={ref}
       initial="hidden"
       whileInView="visible"
       viewport={{ once, margin: "-60px" }}
@@ -109,7 +111,8 @@ export const StaggerContainer = ({
       {children}
     </motion.div>
   );
-};
+});
+StaggerContainer.displayName = "StaggerContainer";
 
 export const StaggerItem = ({
   children,
@@ -197,17 +200,18 @@ export const CountUp = ({ target, suffix = "", prefix = "", duration = 2, classN
 };
 
 // Floating animation for decorative elements
-export const Float = ({
-  children,
-  className = "",
-  delay = 0,
-}: {
+export const Float = forwardRef<HTMLDivElement, {
   children: ReactNode;
   className?: string;
   delay?: number;
-}) => {
+}>(({
+  children,
+  className = "",
+  delay = 0,
+}, ref) => {
   return (
     <motion.div
+      ref={ref}
       className={className}
       animate={{
         y: [-8, 8, -8],
@@ -222,6 +226,7 @@ export const Float = ({
       {children}
     </motion.div>
   );
-};
+});
+Float.displayName = "Float";
 
 export default AnimatedSection;
