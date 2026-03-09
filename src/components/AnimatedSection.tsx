@@ -43,16 +43,17 @@ interface AnimatedSectionProps {
   once?: boolean;
 }
 
-const AnimatedSection = ({
+const AnimatedSection = forwardRef<HTMLDivElement, AnimatedSectionProps>(({
   children,
   animation = "fadeUp",
   delay = 0,
   duration = 0.7,
   className = "",
   once = true,
-}: AnimatedSectionProps) => {
+}, ref) => {
   return (
     <motion.div
+      ref={ref}
       initial="hidden"
       whileInView="visible"
       viewport={{ once, margin: "-80px" }}
@@ -63,8 +64,8 @@ const AnimatedSection = ({
       {children}
     </motion.div>
   );
-};
-
+});
+AnimatedSection.displayName = "AnimatedSection";
 // Staggered children container
 interface StaggerContainerProps {
   children: ReactNode;
