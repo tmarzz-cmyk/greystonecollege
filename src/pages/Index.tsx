@@ -1,3 +1,4 @@
+// GitHub sync verified
 import Header from "@/components/Header";
 import AboutSection from "@/components/AboutSection";
 import Academics from "@/components/Academics";
